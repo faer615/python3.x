@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/01.python3_study/.idea/01.python3_study.iml" filepath="$PROJECT_DIR$/01.python3_study/.idea/01.python3_study.iml" />
-      <module fileurl="file://$PROJECT_DIR$/02.fast-devops/.idea/02.fast-devops.iml" filepath="$PROJECT_DIR$/02.fast-devops/.idea/02.fast-devops.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/python3.iml" filepath="$PROJECT_DIR$/.idea/python3.iml" />
     </modules>
   </component>
