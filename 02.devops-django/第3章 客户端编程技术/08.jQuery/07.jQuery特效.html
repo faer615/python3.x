@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery特效</title>
+    <script>
+        $("button").hide();           /*隐藏所有button标签*/
+        /*将所有button标记用慢速渐变为50%通名都，并在完成渐变后弹出alert消息框*/
+        $("button").fadeTo("slow", 0.5, function (){
+            alert("渐变已完成");
+        });
+        /*将所有p标记用快速执行动画(移动到x坐标100px处，并改变宽度为650px)，并在完成渐变后弹出alert消息框*/
+        $("p").animate({
+            left:'100px',
+            width:'650px',
+        },
+    "fast",function (){
+            alert("自定义动画已完成");
+        });
+$("#paragraph1").stop();  /*停止paragraph1标记动画*/
+    </script>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <ol>
+                <li>.hide().show()：隐藏、显示元素。</li>
+                <li>.toggle()：在元素的hide()与show()状态之间切换。</li>
+                <li>.fadeIn()/.fadeOut()：淡进、淡出效果。</li>
+                <li>.fadeToggle()：在fadeIn()和fadeOut()状态之间切换。</li>
+                <li>.fadeTO(speed,opacity,callback)：渐变为给定的不透明度。其中，speed可以取值为slow、fast或毫秒；opacity值介于0与1之间；callback为动作完成后需要毁掉的函数。</li>
+                <li>.slideDown()./slideUP()：向下滑动出现、向上滑动隐藏。</li>
+                <li>.slideToggle()：在slideDown()和slideUP()状态之间切换。</li>
+                <li>.ansimate({params},speed,callback)：自定义动画效果。其中，params可以是认识CSS属性。</li>
+                <li>.stop()：停止动画</li>
+            </ol>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

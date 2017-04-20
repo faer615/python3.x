@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标记遍历</title>
+</head>
+<body>
+<script>
+    var top = $("#mainFrame").parent(); /* 获取父元素 */
+    /* 获取从id = mainFrame的标签到<body>标签当中的所有mainFrame的祖先节点 */
+    var middle = $("#mainFrame").parentsUntil("body");
+    var child1 = $("#mainFrame").children().first(); /* mainFrame的第一个子元素 */
+</script>
+</body>
+</html>

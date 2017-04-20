@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>访问及修改属性节点</title>
+    <script>
+        var parent = document.getElementById("container");
+        var paragraph1 = parent.childNodes[0];  //第1个p几点
+
+        var x = paragraph1.getAttribute("class"); //x == "emph"
+        var y = paragraph1.class;                 //以成员变量方式访问属性节点
+        //将第一个p节点的class属性设置为"normal"
+        paragraph1.setAttribute("class","normal");
+        //以成员变量方式设置属性节点。
+        paragraph1.class = "normal";
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+#-*- coding: utf-8 -*-
+#Author:Felix_zh
+#E-mail:chengfeng56@qq.com
+#Function: socket 服务端
+
+import socket  # socket 模块
+import datetime
+
+Addr = ("0.0.0.0",8100)
+
+
+#AF_INET 说明使用IPv4地址，SOCK_STREAM指明TCP
+s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+s.bind((Addr))  # 绑定IP与端口
+s.listen(5)          # 监听
+
+while True:
+    conn,Addr = s.accept()                         # 接受TCP连接，并返回新的socket对象
+#    print('Client %s connected!' % str(Addr))      # 输出客户端的IP地址
+    print('客户端: %s 已连接!' % str(Addr))      # 输出客户端的IP地址
+    dt = str(datetime.datetime.now())
+#    message =('Current time is ' + dt)
+    message = ('现在时间是:' + dt)
+    conn.sendall(bytes(message, encoding="utf8"))  # 向客户端发送当前时间
+    print("发送数据为:", message)                       # 发送数据
+    conn.close()                                   # 关闭连接

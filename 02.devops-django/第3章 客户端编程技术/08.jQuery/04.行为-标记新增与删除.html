@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行为-标记新增与删除</title>
+    <script>
+        var newObject = document.createElement("p");
+        newObject.innerHTML = "这是一个新增的段落！";
+
+        $("div").prepend(newObject); /* 插入标记 */
+
+        $("#submit").remove();  /* 删除id为submit的标记 */
+    </script>
+</head>
+<body>
+.append() 在父标记的最后部分插入标记。
+.prepend() 在父元素的最前边。
+.after() 紧随某元素的后边插入标记。
+.before() 在某元素之前插入标记。
+.remove() 删除标记，同时删除它的所有子标记。
+.empty() 清空标记内容，但不删除标记本身。
+</body>
+</html>

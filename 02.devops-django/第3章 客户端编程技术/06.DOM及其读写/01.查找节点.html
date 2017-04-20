@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查找节点</title>
+<script>
+    <!--
+    getElementById 返回对拥有指定ID的第一个对象的引用
+    getElementByName 返回指定名称的对象合集
+    getElementByTagName 返回带有指定标签名的对象合集
+
+    -->
+    var x = document.getElementById("container");
+    var y = document.getElementById("p");
+</script>
+<script>
+    var x = document.getElementById("p1");  //第1个p标签
+    var y = x.nextSibling;                  //第2个p标签
+    var divNode = x.parentNode;             //div标签节点
+    var listNode = divNode.childNodes;      //一个包含两个p标签的列表
+    var f = listNodes[0]                    //第一个p标签节点。即变量x与f指向同一个节点
+</script>
+</head>
+<body>
+
+</body>
+</html>
