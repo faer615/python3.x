@@ -1,6 +1,8 @@
 #!/usr/bin/env python
-#coding:utf8
-#Author:Felix zheng
+#coding: utf8
+#Author: Felix
+#E-mail: chengfeng56@qq.com
+#Function: 列表取值
 # 浅 copy
 import copy
 

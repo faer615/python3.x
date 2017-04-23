@@ -1,6 +1,8 @@
 #!/usr/bin/env python
-# coding: utf8
-# Author:Felix_zh
+#coding: utf8
+#Author: Felix
+#E-mail: chengfeng56@qq.com
+#Function: 购物车优化版
 
 product_list =[
     ['Mi 5s',1999],

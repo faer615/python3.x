@@ -1,6 +1,8 @@
 #!/usr/bin/env python
-# coding: utf8
-# Author:Felix_zh
+#coding: utf8
+#Author: Felix
+#E-mail: chengfeng56@qq.com
+#Function: 内置函数
 
 name = "my \tname is {name} and i am {year} old"
 
@@ -11,7 +13,7 @@ print(name.expandtabs(tabsize=20)) # 将tab转换成20个空格
 print(name.endswith("com")) # 判断以com结尾
 print(name.find("name")) # 字符串位置
 print(name[name.find("name"):]) # 字符串切片
-print(name.format(name='felix',year=31)) # 格式化输出
+print(name.format(name='felix',year=31)) # 01.格式化输出
 print(name.format_map({'name':'felix','year':35})) # 字典格式化
 print('abc123'.isalnum()) # 阿拉巴数字 + 阿拉巴字符
 print('Aab'.isalpha()) # 纯英文字符

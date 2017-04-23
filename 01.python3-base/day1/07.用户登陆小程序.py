@@ -1,6 +1,8 @@
 #!/usr/bin/env python
-#coding:utf8
-#Author:Felix zheng
+#coding: utf8
+#Author: Felix
+#E-mail: chengfeng56@qq.com
+#Function: 用户登陆小程序
 
 count = 0  # 计数器
 username = "111"  # 登录用户名

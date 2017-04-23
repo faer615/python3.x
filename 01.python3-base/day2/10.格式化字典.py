@@ -1,6 +1,8 @@
 #!/usr/bin/env python
-# coding: utf8
-# Author:Felix_zh
+#coding: utf8
+#Author: Felix
+#E-mail: chengfeng56@qq.com
+#Function: 格式化字典
 
 info = {
     'stud001':"Li Qiang",
