@@ -1,6 +1,8 @@
 #!/usr/bin/env python
-#coding:utf8
-#Author:Felix zheng
+#coding: utf8
+#Author: Felix
+#E-mail: chengfeng56@qq.com
+#Function: while循环计数器
 
 age_of_felix = 32
 count = 0

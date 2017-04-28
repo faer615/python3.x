@@ -1,6 +1,8 @@
 #!/usr/bin/env python
-# coding:utf8
-# Author:Felix_zh
+#coding: utf8
+#Author: Felix
+#E-mail: chengfeng56@qq.com
+#Function: 计算器
 
 # 运算方法模块调用
 from __future__ import division

@@ -1,5 +1,9 @@
 #!/usr/bin/env python
-# coding:utf-8
+#coding: utf8
+#Author: Felix
+#E-mail: chengfeng56@qq.com
+#Function: 购物车2
+
 shopping_list =[
     ['Mi 5s',1999],
     ['HaWei Mate8',2799],

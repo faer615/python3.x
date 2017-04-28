@@ -1,13 +1,16 @@
-#!/usr/bin/evn python
-# coding: utf-8
-'''
+#!/usr/bin/env python
+#coding: utf8
+#Author: Felix
+#E-mail: chengfeng56@qq.com
+#Function: 网络测试(适用于2.7)
+
 import os,sys,time,subprocess
 import warnings,logging
 warnings.filterwarnings("ignore",category=DeprecationWarning)
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 from scapy.all import traceroute
 
-domains = raw_input("请输入IP地址/域名：")
+domains = input("请输入IP地址/域名：")
 target = domains.split(' ')
 dport = [80]
 
@@ -18,5 +21,4 @@ if len(target) >= 1 and target[0]!='':
     subprocess.Popen("/usr/bin/convert test.svg test.png",shell=True)
 
 else:
-    print "IP/域名错误！"
-'''
+    print("IP/域名错误！")
