@@ -15,3 +15,21 @@ c:自定义模块
 标准库：
 1.time与datetime
 
+strftime("格式",struct_time) ---> "格式化的字符串"
+strptime("格式化的字符串","格式") ---> struct_time
+
+print(time.strftime("%Y-%m-%d %H:%M:%S",x))
+2017-05-08 16:07:22
+
+print(time.strptime('2017-05-08 10:52:35',"%Y-%m-%d %H:%M:%S"))
+time.struct_time(tm_year=2017, tm_mon=5, tm_mday=8, tm_hour=10, tm_min=52, tm_sec=41, tm_wday=0, tm_yday=128, tm_isdst=-1)
+
+x.tm_year=2017
+x.tm_mon=05
+x.tm_day=08
+
+x.tm_hour=10
+x.tm_min=52
+x.tm_sec=35
+
+#_*_coding:utf-8_*_

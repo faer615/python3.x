@@ -10,4 +10,5 @@ x = time.localtime()
 print(time.strftime("%Y-%m-%d %H:%M:%S",x))
 
 # strptime 转换为 strftime
-print(time.strptime('2017-05-08 10:52:41',"%Y-%m-%d %H:%M:%S"))
+print(time.strptime('2017-05-08 10:52:35',"%Y-%m-%d %H:%M:%S"))
+
