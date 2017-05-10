@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# coding: utf8
+#coding: utf-8
 # Author:Felix_zh
 # 进度条
 

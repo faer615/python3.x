@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf8
 # Author:Felix_zh
+# 生成器并行
 
 import time
 def consumer(name):

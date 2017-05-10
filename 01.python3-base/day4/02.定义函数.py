@@ -1,6 +1,8 @@
 #!/usr/bin/env python
-# coding: utf8
-# Author:Felix_zh
+#-*- coding: utf-8 -*-
+#Author:Felix_zh
+#E-mail:chengfeng56@qq.com
+#Function: 定义函数
 
 import time
 
