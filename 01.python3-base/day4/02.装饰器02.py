@@ -2,7 +2,7 @@
 #-*- coding: utf-8 -*-
 #Author:Felix_zh
 #E-mail:chengfeng56@qq.com
-#Function: 定义函数
+#Function: 装饰器02
 
 import time
 
