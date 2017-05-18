@@ -12,11 +12,11 @@ def fib(max):
     return '--- done ---'
 
 #f = fib(10)
-g = fib(10)
+num = fib(10)
 while True:
     try:
-        x = next(g)
-        print('g:',x)
+        x = next(num)
+        print('\033[1;32m num: \033[0m',x)
     except StopIteration as e:
         print('Generator return value:',e.value)
         break
