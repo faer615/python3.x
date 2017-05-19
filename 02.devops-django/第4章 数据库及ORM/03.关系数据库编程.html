@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>关系数据库编程</title>
+<style type="text/css">
+    div.leftframe {background-color: #26ffc7; height:280px; width: 55%; float:left;}
+    div.rightframe {
+        background-color: #a2ddff;
+        height: 2000px;
+        width: 65%;
+        float: left;
+        padding: 0px;
+        margin: 10px
+    }
+</style>
+</head>
+<body>
+<h3>web数据库开发的基础是熟练应用各种SQL语句，本节将详解常用的SQL增、删、改、查语句，并演示Python的数据库编程方法。</h3>
+<h3>常用SQL语句</h3>
+<h4>SQL的英文全称是Structured Query Language,即结构化查询语言，改语言与1986年经过美国国家标准协会(ANSI)的规范成为关系数据的标准语言，其后ANSI又进行了若干次更新，但至今该插叙语言的主题结构未发生变化。SQL由以下6类内容组成。</h4>
+<div class="leftframe">
+<table border="1">
+    <tr>
+        <th colspan="2">SQL由以下6类内容组成</th>
+    </tr>
+    <tr>
+        <td>1.数据定义语言(DDL)：</td>
+            <td>创建、删除表结构的语言，包括Create、Drop。</td>
+    </tr>
+    <tr>
+        <td>2.数据控制语言(DCL)：</td>
+            <td>为定义数据访问及修改权限而实现的语句，包括Grant、Revoke。</td>
+    </tr>
+    <tr>
+        <td>3.数据查询语言(DQL)：</td>
+            <td>定义从数据表中查询已有数据的方法，例如Select。</td>
+    </tr>
+    <tr>
+        <td>4.数据操作语言(DML)：</td>
+            <td>定义对数据表中的数据进行增、删、改的方法，包括Insert、Delete、Update。</td>
+    </tr>
+    <tr>
+        <td>5.事务处理语言(TPL)：</td>
+            <td>为保证多条SQL语句的数据一致性而定义的语句，比如Commit、Rollback。</td>
+    </tr>
+    <tr>
+        <td>6.指针控制语言(CCL)：</td>
+            <td>定义对查询到多条记录进行逐行控制的方法及与Cursor相关的语句。</td>
+    </tr>
+</table>
+</div>
+<br>
+
+<div class="rightframe">
+<table>
+<ol>
+    <dt>1.Insert语句：</dt>
+    <dd>插入语句</dd>
+    <dd>insert into table_name(列名1,列名2,...) values(值1,值2,...);</dd>
+    <dd>insert into course(id,title,period,description) values(1,'经济学',320,'必修课，建议一年级学习');</dd>
+<br/>
+    <dt>2.Delete语句：</dt>
+    <dd>删除语句</dd>
+    <dd>delete table_name where 条件表达式;</dd>
+    <dd>delete from course where id = 1;</dd>
+    <dd>删除名字以“经济学”开头并且学士不小于200的课时，同时删除学时大约600的课程。</dd>
+    <dd>delete from course where title like '经济学%' and period < 200 or period >600;</dd>
+    <dd>删除名字以外“经济学”开头并且学时小于200或者大约600的课时。</dd>
+    <dd>delete from course where title like '经济学%' and (period <200 or period > 600);</dd>
+<br/>
+    <dt>3.Update语句：</dt>
+    <dd>修改语句</dd>
+    <dd>update table_name set 列名1 = 新值,列名2 = 新值,列名3 = 新值 where 条件表达式；</dd>
+    <dd>将所有学生年龄设置为18</dd>
+    <dd>update student set age = 18</dd>
+    <dd>将所有parent为NULL的学生年龄加1，并且parent设置为“未知”</dd>
+    <dd>update student set age = age + 1, parent = '未知' whete parent is null;</dd>
+<br/>
+    <dt>4.Select语句：</dt>
+    <dd>查询语句</dd>
+    <dd>select [distinct|top] 列名1,列名2 from table_name [where 条件表达式] [group by 分组列 [having 分组筛选条件表达式]][order by 列名1 [asc|desc],列名2[asc|desc]...]</dd>
+    <dd>查询course中的所有记录的所有列</dd>
+    <dd>select * from course;</dd>
+    <dd>查询所有课时，并且排除重复的数字</dd>
+    <dd>select distinct period from course;</dd>
+    <dd>查询课时大于200的课程，最多返回10个课程</dd>
+    <dd>select top 10 * from course where period > 200;</dd>
+    <dd>group by用于对数据进行分组以便于汇总计算：having是group by的可选项，用于对汇总结果进行筛选。汇总计算是指统计记录的个数、计算膜裂的平局值等。</dd>
+<br/>
+    <dd>统计所有课程的平均课时数，即所有记录在一个分组中</dd>
+    <dd>select avg(period) from course</dd>
+    <dd>按课时period进行分组，统计每个课时的课程个数，并且只返回课程个数大于3的课时</dd>
+    <dd>select period, count(*) from course group by period having count(*) > 3;</dd>
+<br/>
+    <dt>聚集函数：</dt>
+    <dd>count(*)统计记录个数</dd>
+    <dd>avg(column)计算某列的平均值</dd>
+    <dd>max(column)找出某列的最大值</dd>
+    <dd>min(column)找出某列的最小值</dd>
+    <dd>var(column)计算某列方差</dd>
+    <dd>first(column)返回某列的第1个值</dd>
+    <dd>last返回某列的最后1个值</dd>
+<br/>
+    <dt>5.对于M:N关系：</dt>
+    <dd>生成一个单独的表表示该关系，该关系的列由两个表的主键组成。</dd>
+    <dt>6.重新审核所有的表：</dt>
+    <dd>对苏姚的地方添加约束，对通常的条件字段设置索引。</dd>
+</ol>
+</table>
+</div>
+</body>
+</html>
