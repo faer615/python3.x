@@ -7,7 +7,7 @@
     div.leftframe {background-color: #26ffc7; height:280px; width: 55%; float:left;}
     div.rightframe {
         background-color: #a2ddff;
-        height: 2000px;
+        height: 1550px;
         width: 65%;
         float: left;
         padding: 0px;
@@ -102,10 +102,26 @@
     <dd>first(column)返回某列的第1个值</dd>
     <dd>last返回某列的最后1个值</dd>
 <br/>
-    <dt>5.对于M:N关系：</dt>
-    <dd>生成一个单独的表表示该关系，该关系的列由两个表的主键组成。</dd>
-    <dt>6.重新审核所有的表：</dt>
-    <dd>对苏姚的地方添加约束，对通常的条件字段设置索引。</dd>
+    <dt>order by</dt>
+    <dd>用于指定返回结果的记录按某个或某几列的大小排序，asc用于指定从小到大排序(asc是默认值)，desc用于指定从大到小排列。比如：</dd>
+    <dd>查询所有课程，并将结果按照id倒序排列</dd>
+    <dd>select * from course order by id desc;</dd>
+<br/>
+    <dt>5.多表连接的select语句</dt>
+    <dd>select 列名1，列名2，... from table_name1 join table_name2 on 连接条件表达式 where 条件表达式;</dd>
+    <dd>查询所有教“大学英语”的男老师</dd>
+    <dd>select teacher.* from teacher inner join curse on teacher.course_id = coruse.id where teacher.gender =True;</dd>
+    <dd>查询所有有18岁的学生选择的课程</dd>
+    <dd>select distinct course.title form curse inner join enroll on course.id = enroll.course_id inner join student on enroll.student_id = student.student_id where student.age = 18;</dd>
+<br/>
+    <dt>6.事务控制语句</dt>
+    <dd>3条不可分割的语句</dd>
+    <dt>begin transaction</dt>
+    <dd>启动一个新事务，即其后的所有语句被封装为一个原子性事务，直到有rollback或者commit被执行。</dd>
+    <dt>rollback</dt>
+    <dd>回滚事务，结束当前事务，取消(undo)在本次事务中已经执行成功的语句。</dd>
+    <dt>commit</dt>
+    <dd>提交事务，当前事务正式完成，其中DML语句对数据库做的更新正式生效。</dd>
 </ol>
 </table>
 </div>

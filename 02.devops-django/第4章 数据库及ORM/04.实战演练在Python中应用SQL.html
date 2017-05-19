@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>在Python中应用SQL</title>
+<style type="text/css">
+    div.leftframe {background-color: #90ecff; height:200px; width: 28%; float:left;}
+    div.rightframe {
+        background-color: #a2ddff;
+        height: 300px;
+        width: 65%;
+        float: left;
+        padding: 10px;
+        margin: 10px
+    }
+</style>
+</head>
+<body>
+<h2>常用的数据库引擎的python包</h2>
+<div class="leftframe">
+<table border="1">
+    <tr>
+        <th>数据库</th><th>python包</th>
+    </tr>
+    <tr>
+        <td>MySQL</td><td>MySQLdb</td>
+    </tr>
+    <tr>
+        <td>SQLite</td><td>SQLite3</td>
+    </tr>
+    <tr>
+        <td>Oracle</td><td>cx_Oracle</td>
+    </tr>
+    <tr>
+        <td>PostgreSQL</td><td>PsCopg2或PyPgSQL或PyGreSQL</td>
+    </tr>
+    <tr>
+        <td>MS SQL Server</td><td>pymssql</td>
+    </tr>
+    <tr>
+        <td>Excel</td><td>pyExcelerator</td>
+    </tr>
+</table>
+</div>
+<br/>
+<div class="rightframe">
+<h2>Python数据库编程步骤如下：</h2>
+<table>
+    <tr>
+        <td>
+            <ol>
+                <li>引入Python引擎包</li>
+                <li>连接数据库：使用引擎包的connect方法连接物理数据库，通常在本步骤中需要输入数据库的IP地址、端口、数据库名、数据库用户名和密码。对于SQLite和Excel等文件数据库，本步骤需要给出文件名。</li>
+                <li>获取游标：在DB-API规范中，游标(cursor)用于执行SQL命令并且管理查询到的数据集。</li>
+                <li>执行SQL命令：将SQL命令传给游标执行，并解析返回的结果。本步骤可以多次进行。</li>
+                <li>提交或回滚事务：在执行DML类的SQL语句时，数据库引擎会自动启动新事务，在一系列的操作完成之后，可以提交或者回滚当前事务。</li>
+                <li>关闭游标：完成SQL操作后变比游标。</li>
+                <li>关闭数据库连接：关闭Python客户端和数据库服务器的连接。</li>
+            </ol>
+        </td>
+    </tr>
+</table>
+</div>
+</body>
+</html>
