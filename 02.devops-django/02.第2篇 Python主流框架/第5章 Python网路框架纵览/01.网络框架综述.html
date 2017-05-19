@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网络框架综述</title>
+</head>
+<body>
+<h2>MVC框架</h2>
+
+全栈网络框架，是指除了封装网络和线程操作，还提供HTTP栈、数据库读写管理、HTML模板引擎等一系列功能的网络框架。Django、Tornado和Flask是全栈网络框架的典型标杆。
+MVC(Model-View-Controller)模式最早由Trygve Reenskaug在1978年提出，在20世纪80年代是程序语言Smalltalk的一种内部架构。
+<table>
+<ol>
+    <dt>Model（模型）表示应用程序核心（比如数据库记录列表）。</dt>
+    <dt>View（视图）显示数据（数据库记录）。</dt>
+    <dt>Controller（控制器）处理输入（写入数据库记录）。</dt>
+</ol>
+</table>
+<table>
+<h2>MVC 模式同时提供了对 HTML、CSS 和 JavaScript 的完全控制。</h2>
+<ol>
+    <dt>Model（模型）是应用程序中用于处理应用程序数据逻辑的部分。</dt>
+        <dd>通常模型对象负责在数据库中存取数据。用于封装与应用程序的业务逻辑相关的数据集对数据的处理方法。提供实时的数据更新。</dd>
+    <dt>View（视图）是应用程序中处理数据显示的部分。</dt>
+        <dd>通常视图是依据模型数据创建的。负责数据的显示和呈现。</dd>
+    <dt>Controller（控制器）是应用程序中处理用户交互的部分。</dt>
+        <dd>通常控制器负责从视图读取数据，控制用户输入，并向模型发送数据。可以看成提供View的方向功能。</dd>
+</ol>
+</table>
+<h2>Python的4中框架</h2>
+<ol>
+    <dt>1.Django</dt>
+        <dd>发布与2003年，是当前Python世界里最负有盛名且最成熟的网络框架。最初用于在线新闻的web站点，目前应用最广泛python网络框架。</dd>
+    <dt>2.Tornado</dt>
+        <dd>是一个强大的、支持协程、高效并发且可扩展的Web服务器，发布于2009年9月，应用于friendFeed、Facebook。强项在于可以利用它的异步协程机制开发搞笑的服务器系统。</dd>
+    <dt>3.Flask</dt>
+        <dd>发布于2010年，定义在微小项目上</dd>
+    <dt>4.Twisted</dt>
+        <dd>适用于从传输层到自定义应用歇息的所有类型的网络程序开发，并能在不同操作系统上提供很高的运行效率。对python3支持有限，建议运行在python2.7版本。</dd>
+</ol>
+</table>
+</body>
+</html>

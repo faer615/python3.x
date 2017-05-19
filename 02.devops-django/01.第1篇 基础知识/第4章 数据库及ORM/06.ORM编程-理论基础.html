@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ORM理论基础</title>
+<style type="text/css">
+    div.leftframe {background-color: #d3eeff; height:400px; width: 70%; float:left;}
+</style>
+</head>
+<body>
+<h3>ORM(Object-Relational Mapping,对象关系映射)的作用是在关系型数据库和业务实体对象之间做一个映射，</h3>
+<h3>这样开发者在操作数据库的数据时，就不需要再去和复杂的SQL语句打交道，</h3>
+<h3>只需要简单地操作对象的属性和方法。所有的ORM必须具备3方面的基本能力，映射技术、CRUD操作和缓存优化</h3>
+
+<div class="leftframe">
+<table>
+<ol>
+    <dt>1.映射技术：</dt>
+    <dd>面向对象是从软件工程的基本原则(如耦合、聚合、封装)的基础上发展而来的，而关系数据库是从书序而理论的基础上发展而来的，两套理论存在显著的却别。</dd>
+    <dd>ORM通过映射机制将两种技术联系起来。</dd>
+    <dd>每种编程语言都有自己的ROM库，比如Java的Hibernate、Ibatis;C#的Grove、LinQ；Python的SQLAlchemy等，所有这些ROM苦都必须解决如下3个映射问题。</dd>
+<br/>
+    <dt>数据类型映射：</dt>
+    <dd>将数据库的类型映射为编程语言自身的类型。数据类型映射解决了有数据表列(Column)类型向编程语言类型转换的问题。比如SQLAlchemy中定义了一系列的数据类型(SmallInteger、Float、Time等)用于对应数据库中的类型。</dd>
+<br/>
+    <dt>类映射：</dt>
+    <dd>将数据表定义映射为编程语言自身的类，这样，数据表中的每一条记录就可以映射为一个编程语言自身的对象。因为数据表的定义本身在每个业务场景中各不一样，所以需要开发者通过配置文件或者代码文件的方式明确类映射。在SQLAlchemy中开发者通过定义集成自declarative_base()返回的类型来实现类映射。</dd>
+<br/>
+    <dt>关系映射：</dt>
+    <dd>将数据库中基于外键的关系连接转换为编程语言中基于对象应用的关系连接。在SQLAlchemy中通过在数据表类中定义relationship()字段，是开发者能够制定数据表之间的连接关系。</dd>
+<br/>
+    <dt>2.CRUD操作：</dt>
+    <dd>是做数据库处理时的增加(create)、读取(retrieve、重新得到数据)、更新(update)、删除(delete)几个单词的首写字母简称。在SQL中通过insert、select、update、delet四中语句实现CRUD。</dd>
+    <dd>由于ROM对开发者屏蔽了SQL，所有所有的ORM库必须提供自己的一些CRUD方案。</dd>
+    <dd>大多数库会为数据对象提供insert、update、delete、query等函数实现CRUD，并提供beginTransaction、commit、rollback等函数管理实务。当开发者调用这些函数时，ROM自动执行下列操作：</dd>
+    <dd>1.将这些调用转换为SQL语句； 2.通过数据库引擎发送给数据库执行； 3.将数据库返回结果记录用ORM映射技术转换为类对象。</dd>
+<br/>
+    <dt>3.缓存技术：</dt>
+    <dd>由于数据库操作通常比较耗时，所有大多数ORM提供数据缓存优化的功能。</dd>
+    <dd>1.将数据库中查询到的数据以类对象的形式保存在内存中，以便之后随时提取。</dd>
+    <dd>2.在真正需要读取查询结果时才执行数据库的select操作，而不是在ORM查询命令执行时查询数据库。</dd>
+<br/>
+    <dt>4.为什么使用ORM：</dt>
+    <dd>1.屏蔽了数据库的细节，无须与SQL语句打交道，提高了开发效率。</dd>
+    <dd>2.便于数据库迁移</dd>
+    <dd>3.应用缓存等技术有时可以调高数据库的操作效率。</dd>
+</ol>
+</table>
+</div>
+</body>
+</html>

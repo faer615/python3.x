@@ -12,7 +12,7 @@ cur = conn.cursor()
 
 # 执行一系列的SLQ语句
 # 建立一个表
-cur.execute("create table demo(num int,str varchar(20));")
+cur.execute("create table if not exists demo(num int,str varchar(20));")
 # 插入一些记录
 cur.execute("insert into demo values(%d, '%s')" %(1,'aaa'))
 cur.execute("insert into demo values(%d, '%s')" %(2,'bbb'))
