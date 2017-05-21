@@ -8,7 +8,6 @@ def consumer(name):
     print("%s 准备吃包子了！" %name)
     while True:
         baozi = yield
-
         print("[%s]包子上来了,被[%s]吃了！" %(baozi,name))
 
 #c = consumer("小郑")
@@ -33,5 +32,4 @@ def producer(name):
             c.send(i)
             c2.send(i)
             c3.send(i)
-
 producer("Felix")
