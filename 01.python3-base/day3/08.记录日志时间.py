@@ -1,6 +1,8 @@
 #!/usr/bin/env python
-# coding: utf8
+# coding: utf-8
 # Author:Felix_zh
+#Function: 记录日志时间
+
 import time
 def logger():
     time_format='%Y-%m-%d %X'
@@ -8,21 +10,21 @@ def logger():
     with open('a.txt','a+') as f:
         f.write('%s end action\n' %time_current)
 
-def test1():
+def tst11():
     print('test1 starting action...')
 
     logger()
 
-def test2():
+def tst21():
     print('test2 starting action...')
 
     logger()
 
-def test3():
+def tst31():
     print('test3 starting action...')
 
     logger()
 
-test1()
-test2()
-test3()
+tst11()
+tst21()
+tst31()

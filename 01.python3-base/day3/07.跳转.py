@@ -1,19 +1,19 @@
 #!/usr/bin/env python
-# coding: utf8
+# coding: utf-8
 # Author:Felix_zh
 
-def test1():
+def tt11():
     pass
 
-def test2():
+def tt12():
     return 0
 
-def test3():
+def tt13():
     return 1,10,'hello',['news','aaa'],{'name':'wang'}
 
-t1 = test1()
-t2 = test2()
-t3 = test3()
+t1 = tt11()
+t2 = tt12()
+t3 = tt13()
 
 print(t1)
 print(t2)
