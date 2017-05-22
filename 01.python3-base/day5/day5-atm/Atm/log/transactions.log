@@ -30,3 +30,4 @@
 2017-04-12 12:53:43,298 - transaction - INFO - account:1234   action:repay    amount:1.0   interest:0.0
 2017-04-12 12:53:45,283 - transaction - INFO - account:1234   action:repay    amount:1.0   interest:0.0
 2017-04-12 12:54:12,393 - transaction - INFO - account:1234   action:withdraw    amount:4000.0   interest:200.0
+2017-05-22 17:35:53,766 - transaction - INFO - account:1234   action:repay    amount:0.0   interest:0.0
