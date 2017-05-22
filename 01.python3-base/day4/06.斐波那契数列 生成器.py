@@ -1,7 +1,8 @@
 #!/usr/bin/env python
-# coding: utf8
-# Author:Felix_zh
-# 斐波那契数列 生成器
+#-*- coding: utf-8 -*-
+#Author:Felix_zh
+#E-mail:chengfeng56@qq.com
+#Function:
 
 def fib(max):
     n,a,b = 0,0,1
