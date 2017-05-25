@@ -25,7 +25,7 @@ def producer(name):
     c2.__next__()
     c3.__next__()
     print("开始准备做包子！")
-    for i in range(11):
+    for i in range(11): # 10个数字
         time.sleep(1)
         if i > 0:
             print("做了3个包子！")

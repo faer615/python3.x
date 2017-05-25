@@ -26,9 +26,9 @@ for i in mma:
     print(i)
 
 # 列表生成式
-#lis = [lambda x:x*2 for x in range(10)]
-#for x in lis:
-#    print(x)
+lis = [lambda x:x*2 for x in range(10)]
+for x in lis:
+    print(x)
 
 print("++++++++++++++++++++++++")
 # 依次相加列表数值
@@ -48,5 +48,21 @@ print(sorted(a.items(),key=lambda x:x[1]))
 # 默认无序打印
 print(a)
 
+# 合并变量
+a = [1,2,3,4,5]
+b = ['a','b','c','d','e']
+
+for i in zip(a,b):
+    print(i)
+
+# 根据名称导入模块
 #import decorator
 __import__('decorator')
+
+# 只打印全局变量
+#def fsd():
+#    local_var = 333
+#    print(locals())
+#fsd()
+#print(globals())
+#print(globals().get('local_var'))

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django特点及结构</title>
+</head>
+<body>
+Django于2003年诞生于美国堪萨斯州(Kansas)，2005年加入BSD许可证家族，称为开源网络框架。
+
+<h3>1.Django框架的特点</h3>
+Django定义了服务发布、路由映射、模板编程、数据库处理的一套功能。
+<table>
+    <tr>
+        <td>
+            <ol>
+                <li>完善文档</li>
+                <li>集成数据访问组件</li>
+                <li>强大的URL映射技术</li>
+                <li>后台管理系统自动生成</li>
+                <li>错误信息非常完整</li>
+            </ol>
+        </td>
+    </tr>
+</table>
+<h3>2.Django的组成</h3>
+<table>
+    <ol>
+        <dt>管理工具(Management)</dt>
+            <dd>一套内置的创建站点、迁移数据、维护静态文件的命令工具。</dd>
+        <dt>模型(Model)</dt>
+            <dd>提供数据访问接口和模块，包括数据字段、元数据、数据关系等的定义操作。</dd>
+        <dt>试图(View)</dt>
+            <dd>Django的试图层封装了HTTP Response的一系列操作和数据流，其中主要功能包括URL映射机制、绑定模板等。</dd>
+        <dt>模板(Template)</dt>
+            <dd>是一套Django自己的页面渲染模板语言，用若干内置的tags和filters定义页面的生成方式。</dd>
+        <dt>表单(Form)</dt>
+            <dd>通过内置数据类型和空间生成HTML表单。</dd>
+        <dt>管理站(Admin)</dt>
+            <dd>通过声明需要管理的Model，快速生成后台数据管理网站。</dd>
+    </ol>
+</table>
+</body>
+</html>

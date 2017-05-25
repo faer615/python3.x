@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# coding: utf8
+# coding: utf-8
 # Author:Felix_zh
 # 除了单一字符串，整数，其他类型局部变量都可以修改
 
