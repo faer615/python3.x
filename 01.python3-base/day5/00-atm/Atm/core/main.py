@@ -85,7 +85,7 @@ def transfer(acc_data):
 def pay_check(acc_data):
     pass
 def logout(acc_data):
-    exit()
+    pass
 def interactive(acc_data):
     '''
     interact with user
