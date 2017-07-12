@@ -14,4 +14,5 @@ Last line
 
 age = 3
 name = "Tom"
-print("{0} was {1} year old".format(name,age))
+print("{0} was {1} years old".format(name,age))
+print(name + " was " + str(age) + " years old")
