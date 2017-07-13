@@ -1,8 +1,11 @@
 #!/usr/bin/env python
-#-*- coding: utf-8 -*-
-#Author:Felix_zh
-#E-mail:chengfeng56@qq.com
-#Function: python支持的数据类型
+# -*- coding: utf-8 -*-
+# @Software: PyCharm
+# @Time    : 2017/7/13 22:54
+# @File    : 5.py
+# @Author  : Felix-zh
+# @E-mail  : chengfeng56@qq.com
+# @Function: 支持的数据类型
 '''
 numerices 数字
 sequences 序列
