@@ -1,11 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Software: PyCharm
-# @Time    : 2017/7/13 22:54
-# @File    : 2字符串.py
-# @Author  : Felix-zh
-# @E-mail  : chengfeng56@qq.com
-# @Function: 字符串 单，双引号 多行注释
+
+
 
 print("hello world!")
 print('hello world!')
