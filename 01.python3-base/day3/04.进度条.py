@@ -14,7 +14,7 @@ for line in f:
     count += 1
 
 
-#p#rint(f.tell())
+#print(f.tell())
 #print(f.readline().strip())
 #print(f.tell())
 # 高效率 打印文件
